@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStateContext } from '../contexts/ContextProvider';
-const Button = ({bgColor, color, size, text, borderRadius}) => {
+const Button = ({bgColor, color, size, text, borderRadius, icon}) => {
   const { setIsClicked  } = useStateContext()
   return (
     <button
@@ -10,6 +10,7 @@ const Button = ({bgColor, color, size, text, borderRadius}) => {
       onClick={() => setIsClicked(true)}
     >
       {text}
+      {icon}
     </button>
   )
 }
